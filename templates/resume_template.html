@@ -1,59 +1,154 @@
 <!DOCTYPE html>
 <html>
- <head>
-<link rel="stylesheet" type="text/css" href="static/styles/styles.css"></link>
-<title></title>
-</head>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/styles/styles.css">
+    </link>
+    <title>My Resume</title>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/styles/styles.css">
+        <title>Resume</title>
+        <style>
+            body {
+                font-family: 'Trebuchet MS', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f9;
+                color: #333;
+            }
+
+            #header {
+                background-color: #2c3e50;
+                color: white;
+                padding: 20px;
+                text-align: center;
+            }
+
+            #header p {
+                margin: 5px;
+                font-size: 18px;
+            }
+
+
+
+            .right {
+                float: left;
+                width: 75%;
+                padding: 20px;
+            }
+
+            .right h3 {
+                color: #2c3e50;
+                border-bottom: 2px solid #3498db;
+                padding-bottom: 5px;
+                margin-bottom: 15px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid #ddd;
+            }
+
+            table td,
+            table th {
+                padding: 10px;
+                text-align: left;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            table tr:hover {
+                background-color: #f1f1f1;
+            }
+
+            ul {
+                list-style-type: square;
+                padding-left: 20px;
+            }
+
+            ul li {
+                margin-bottom: 10px;
+            }
+
+            #footer {
+                clear: both;
+                background-color: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+            }
+        </style>
+    </head>
+
 <body>
-<div id="header">
-<p id="name">{{user_name}}</p>
-         <p id="email">{{email_id}}</p></a>
-         <p id="contact">{{contact_number}}</p>
-     </div>
-     <div class="left">
-     </div>
-     <div class="right">
-            
-            <h3>Educational Qualifications</h3>
-            <table>
-                <tr id="heading">
-                    <td>Grade</td>
-                    <td>School Name</td>
-                    <td>Percentage</td>
-                    <td>Year</td>
-                </tr>
-                <tr>
-                    <td>{{grade}}</td>
-                    <td>{{school_name}}</td>
-                    <td>{{percentage}}</td>
-                    <td>{{year}}</td>
-                </tr>
-                
-            </table>
-            <h3>Independent Course</h3>
-            <p>
-            <ul><li>{{independent_course}}</li></ul>
-            </p>    
-            <h3>Hobbies:</h3>
-            <p>
-            <ul>
-                <li>{{hobbies}}</li>
-			</ul>
-            </p>
-            <h3>Personal Information:</h3>
-            <p>
-            <ul>
-                <li>
-					DOB: {{dob}}
-                </li>
-				<li>Father Name: {{father_name}}</li>
-				<li>Mother Name: {{mother_name}}</li>
-			</ul>
-            </p>
-            <h3>Declaration</h3>
-            <p>
-            I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.</p>
-     </div>
-     <div id="footer"></div>
-    </body>
+    <div id="header">
+        <p id="name">{{user_name}}</p>
+        <p id="email">{{email_id}}</p></a>
+        <p id="contact">{{contact_number}}</p>
+        <img src="{{photo}}">
+    </div>
+
+    <div class="right">
+
+        <h3>Educational Qualifications</h3>
+        <table>
+            <tr id="heading">
+                <td>Grade</td>
+                <td>School Name</td>
+                <td>Percentage</td>
+                <td>Year</td>
+            </tr>
+            <tr>
+                <td>{{grade}}</td>
+                <td>{{school_name}}</td>
+                <td>{{percentage}}</td>
+                <td>{{year}}</td>
+            </tr>
+
+        </table>
+        <h3>Independent Course</h3>
+        <p>
+        <ul>
+            <li>{{independent_course}}</li>
+        </ul>
+        </p>
+        <h3>Hobbies:</h3>
+        <p>
+        <ul>
+            <li>{{hobbies}}</li>
+        </ul>
+        </p>
+        <h3>Personal Information:</h3>
+        <p>
+        <ul>
+            <li>
+                DOB: {{dob}}
+            </li>
+            <li>Father Name: {{father_name}}</li>
+            <li>Mother Name: {{mother_name}}</li>
+        </ul>
+        </p>
+        <h3>Declaration</h3>
+        <p>
+            I hereby declare that the details furnished above are true and correct to the best of my knowledge and
+            belief.</p>
+    </div>
+    <div id="footer"></div>
+</body>
+
 </html>
